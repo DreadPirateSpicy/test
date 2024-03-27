@@ -19,10 +19,14 @@ const text = `
 // Initialize a variable to keep track of the current letter index
 let letterIndex = 0;
 
-// Create an interval that will update the text content of the <div> element every 100 milliseconds
 const intervalId = setInterval(() => {
-    // Add the next letter to the text content of the <div> element
-    messageElement.innerText += text[letterIndex];
+    // If the next character is a space, add a non-breaking space (&nbsp;) to maintain the space
+    if (text[letterIndex] === ' ') {
+        messageElement.innerHTML += '&nbsp;';
+    } else {
+        // Add the next character to the text content of the <div> element
+        messageElement.innerText += text[letterIndex];
+    }
 
     // Increment the letter index
     letterIndex++;
@@ -32,4 +36,4 @@ const intervalId = setInterval(() => {
         // If so, clear the interval to stop the animation
         clearInterval(intervalId);
     }
-}, 100);
+}, 50);
