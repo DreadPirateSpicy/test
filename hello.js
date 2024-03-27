@@ -3,7 +3,7 @@ const messageElement = document.getElementById('message');
 
 // Define the text to display
 const text = `
-    Dear  Zhao, I hope this letter finds you well.
+    Dear Zhao, I hope this letter finds you well.
     I write to inform you of an inheritance that has befallen
     you by your great ancestor Ghengis Khan.
     You are now the owner of a humble yet storied establishment in Karakorum.
